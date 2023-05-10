@@ -1,0 +1,33 @@
+
+architecture
+
+Nous avons les fichiers csv provennat du concessionnaire concernant:
+- les clients de l'année en cours
+- les informations sur les immatriculations cette année
+- le catalogue de véhicules mis en vente
+- la liste des clients sélectionnés par le service marketing
+- les détails sur l'emission co2
+
+les fichiers sont départagés dans les sources de données:
+
+HDFS:
+- le répertoire /clients qui contient les fichiers concernant les clients
+- le répertoire /immatriculation qui contient les fichiers concernant les immatriculations
+- le répertoire /co2 qui contient les fichiers concernant les émissions carbone
+
+MongoDb:
+- la collection "catalogue" de la base "concessionnaire" qui contient les données du catalogue
+
+OracleNosql:
+- la table "marketing" qui contient les données des clients sélectionnés par le service marketing
+
+
+
+Datalake:
+
+HIVE, avec les tables externes pointant sur chaque source:
+- clients_ext
+- immatriculations_ext
+- catalogue_ext
+- marketing_ext
+
